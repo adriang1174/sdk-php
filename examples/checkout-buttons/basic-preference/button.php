@@ -4,6 +4,7 @@ require_once "../../../lib/mercadopago.php";
 
 if (!empty($_REQUEST['precio']))
 {
+	$precio = $_REQUEST['precio'] + 0.0;
 	$mp = new MP("1362883408014966", "bZCd0dFXDFFN26CR2kAml3I7kLoJx6cK");
 	
 	$preference_data = array(
@@ -13,7 +14,7 @@ if (!empty($_REQUEST['precio']))
 	            "currency_id" => "ARS",
 	            "category_id" => "Category",
 	            "quantity" => 1,
-	            "unit_price" => $_REQUEST['precio']
+	            "unit_price" => $precio
 	        )
 	    )
 	);
