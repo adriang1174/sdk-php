@@ -21,6 +21,8 @@ if (!empty($_REQUEST['precio']))
 	$preference = $mp->create_preference($preference_data);
 	header("Location: ". $preference["response"]["sandbox_init_point"]);
 }
+else
+	echo "No se cargo precio";
 ?>
 
 <!doctype html>
@@ -29,7 +31,7 @@ if (!empty($_REQUEST['precio']))
         <title>MercadoPago SDK - Create Preference and Show Checkout Example</title>
     </head>
     <body>
-    	<form action="" method="post">
+    	<form action="button.php" method="post">
     		<input type="text" name="precio" id="precio" />
     		<input type="submit" class="orange-ar-m-sq-arall" value="Pagar">
     	</form>
