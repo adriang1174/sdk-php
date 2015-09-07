@@ -31,7 +31,7 @@ if (!empty($_REQUEST['precio']))
     <body>
     	<form action="" method="post">
     		<input type="text" name="precio" id="precio />
-    		<input type="submit" class="orange-ar-m-sq-arall">Pagar</button>
+    		<input type="submit" class="orange-ar-m-sq-arall" value="Pagar">
     	</form>
 <!--       	<a href="<?php echo $preference["response"]["sandbox_init_point"]; ?>" name="MP-Checkout" class="orange-ar-m-sq-arall">Pay</a> -->
         <script type="text/javascript" src="http://mp-tools.mlstatic.com/buttons/render.js"></script>
