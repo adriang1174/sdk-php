@@ -18,8 +18,13 @@ if (!empty($_REQUEST['precio']))
 	        )
 	    )
 	);
-	
-	$preference = $mp->create_preference($preference_data);
+	try{
+			$preference = $mp->create_preference($preference_data);
+		}
+		catch(e){
+		print_r(e);
+		exit;
+		}
 	header("Location: ". $preference["response"]["sandbox_init_point"]);
 }
 
