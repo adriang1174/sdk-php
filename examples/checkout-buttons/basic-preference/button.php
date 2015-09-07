@@ -22,8 +22,7 @@ if (!empty($_REQUEST['precio']))
 	$preference = $mp->create_preference($preference_data);
 	header("Location: ". $preference["response"]["sandbox_init_point"]);
 }
-else
-	echo "No se cargo precio";
+
 ?>
 
 <!doctype html>
@@ -34,9 +33,9 @@ else
     <body>
     	<form action="button.php" method="post">
     		<input type="text" name="precio" id="precio" />
-    		<input type="submit" class="orange-ar-m-sq-arall" value="Pagar">
+    		<input type="submit" name = "MP-Checkout" class="orange-ar-m-sq-arall" value="Pagar">
     	</form>
-<!--       	<a href="<?php echo $preference["response"]["sandbox_init_point"]; ?>" name="MP-Checkout" class="orange-ar-m-sq-arall">Pay</a> -->
+       	<a href="<?php echo $preference["response"]["sandbox_init_point"]; ?>" name="MP-Checkout" class="orange-ar-m-sq-arall">Pay</a> 
         <script type="text/javascript" src="http://mp-tools.mlstatic.com/buttons/render.js"></script>
     </body>
 </html>
